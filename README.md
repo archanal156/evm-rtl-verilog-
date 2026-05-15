@@ -4,7 +4,7 @@ A fully synthesizable RTL implementation of an EVM
 designed in Verilog HDL with FSM-based control logic.
 
 ## FSM Overview
-![FSM Diagram](docs/fsm_diagram.png)
+![FSM Diagram](docs/fsm_diagram.jpg)
 
 - 7 states: IDLE → W_CE → W_B → LED_A → W_R → W_NCE → V_C
 - Synchronous clock: 50 MHz (20ns)
