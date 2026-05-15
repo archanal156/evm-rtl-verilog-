@@ -1,11 +1,24 @@
-# evm-rtl-verilog-
-Electronic Voting Machine RTL Design in Verilog HDL 
-# Electronic Voting Machine — RTL Design
+# Electronic Voting Machine (EVM) — RTL Design
 
-Verilog HDL implementation of an EVM with FSM-based control logic,
-vote counting, and display output.
+A fully synthesizable RTL implementation of an EVM
+designed in Verilog HDL with FSM-based control logic.
 
-## Tools
+## FSM Overview
+![FSM Diagram](docs/fsm_diagram.png)
+
+- 7 states: IDLE → W_CE → W_B → LED_A → W_R → W_NCE → V_C
+- Synchronous clock: 50 MHz (20ns)
+- No combinational loops, no latches
+- Master_En controls all transitions
+
+## Features
+- FSM-based voting control
+- Candidate buttons: A, B, C, D
+- LED confirmation per vote (3 clock cycle hold)
+- Vote counting logic
+- Duplicate vote prevention via W_NCE state
+
+## Tools Used
 - Language: Verilog HDL
 - Simulation: Synopsys VCS 
 
